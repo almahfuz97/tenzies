@@ -1,38 +1,93 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(53, 52, 52);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.parent-div {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  background-color: beige;
+  padding: 5% 2%;
+  border-radius: 10px;
+  box-shadow: 1px 1px 20px white;
+  width: 90%;
+
+}
+
+.top-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5%;
+}
+
+.top-info h1 {
+  margin-bottom: 25px;
+}
+
+.top-info p {
+  text-align: center;
+  font-weight: 500;
+}
+
+.dice-div {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.dice {
+  background: white;
+  color: #000;
+  padding: 5px 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px 5px gray;
+  font-weight: bold;
+  /* background: white;
+  color: #000;
+  padding: 5px 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 1px 5px gray;
+  font-weight: bold; */
+
+}
+
+button {
+  margin-top: 10%;
+  padding: 10px 50px;
+  border-radius: 10px;
+  background: black;
   color: white;
+  font-size: 1.2rem;
+  font-weight: bolder;
 }
 
-.App-link {
-  color: #61dafb;
+.dice-selected {
+  background-color: green;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media screen and (min-width:768px) {
+  .parent-div {
+    width: 50%;
+
   }
 }
